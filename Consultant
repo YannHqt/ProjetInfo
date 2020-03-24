@@ -1,0 +1,32 @@
+class Consultant():
+    def __init__(self):
+        pass
+
+
+    def afficher_pays(self):
+
+        print("Quel pays voulez-vous consulter ?")
+
+        value = int(input("> "))
+
+        print("Le nom du pays est {},\n la superficie du pays est {},\n la population est de {} habitants,\n le taux de ... est {},\n le taux d'inflation est {},\n La dette est de {},\n Le taux de chômage est {},\n Les dépenses concernant la santé s'élève à {},\n Les dépenses concernant l'éducation s'élève à {}".format(data[value]['Government']['Country name']['conventional short form']['text'], data[value]['Geography']['Area']['total']['text'], data[value]['People and Society']['Population']['text'], data[value]['People and Society']['Population growth rate']['text'], data[value]['Economy']['Inflation rate (consumer prices)']['text'], data[value]['Economy']['Debt - external']['text'], data[value]['Economy']['Unemployment rate']['text'], data[value]['People and Society']['Health expenditures']['text'], data[value]['People and Society']['Education expenditures']['text']))
+        
+        
+    def proposition(self):
+        L = []
+        print("Quel pays voulez-vous modifier ?")
+        pays = int(input("> "))
+        L.append(pays)
+        print ("""Quelle données souhaitez-vous modifier?\n
+   1. Le nom du pays
+   2. La superficie\n""")
+        donnees = int(input("> "))
+        dict = {1 : "['Government']['Country name']['conventional short form']['text']", 2 : "['Geography']['Area']['total']['text']"}
+        L.append(dict[donnees])
+        new_info = input("Quelle est la nouvelle information ?")
+        L.append(new_info)
+        list_proposition.append(L)
+        print("Votre proposition a bien été enregistrée")
+
+
+Albert = Consultant()
